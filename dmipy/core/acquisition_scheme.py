@@ -84,7 +84,7 @@ class DmipyAcquisitionScheme:
             else:
                 deltas = []
 
-            if deltas == []:
+            if len(deltas) == 0:
                 deltas = np.c_[np.zeros(len(self.bvalues))]
             unique_deltas = np.unique(deltas, axis=0)
             self.shell_indices = np.zeros(len(bvalues), dtype=int)
